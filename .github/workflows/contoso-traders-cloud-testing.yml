@@ -157,7 +157,7 @@ jobs:
         run: bicep --version
   
       - name: Build Bicep template with linter rule disabled
-        run: bicep build ./iac/createResources.bicep --outfile ./iac/createResources.json --config-file ./bicepconfig.json
+        run: /usr/local/bin/bicep build ./iac/createResources.bicep --outfile ./iac/createResources.json --config-file ./bicepconfig.json
       
       - name: Deploy ARM template
         uses: Azure/arm-deploy@v1
