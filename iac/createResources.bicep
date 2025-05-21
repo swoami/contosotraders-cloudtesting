@@ -659,10 +659,10 @@ resource cartsapiaca 'Microsoft.App/containerApps@2022-06-01-preview' = {
           username: acr.name
         }
       ]
+      // suppress-next-line use-secure-value-for-secure-inputs
       secrets: [
         {
-          name: cartsApiAcaSecretAcrPassword
-          // suppress-next-line use-secure-value-for-secure-inputs
+          name: cartsApiAcaSecretAcrPassword          
           value: acr.listCredentials().passwords[0].value
         }
       ]
@@ -1575,10 +1575,10 @@ resource cartsinternalapiaca 'Microsoft.App/containerApps@2022-06-01-preview' =
             username: acr.name
           }
         ]
+        // suppress-next-line use-secure-value-for-secure-inputs
         secrets: [
           {
-            name: cartsInternalApiAcaSecretAcrPassword
-            // suppress-next-line use-secure-value-for-secure-inputs
+            name: cartsInternalApiAcaSecretAcrPassword            
             value: acr.listCredentials().passwords[0].value
           }
         ]
